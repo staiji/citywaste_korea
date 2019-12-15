@@ -1,0 +1,8 @@
+{
+  "domain": "citywaste_korea",
+  "name": "CityWaste Korea",
+  "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/citywaste_korea/",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": []
+}

@@ -1,0 +1,1 @@
+"""The citywaste korea integration."""
