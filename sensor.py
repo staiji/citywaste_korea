@@ -18,7 +18,7 @@ _LOGGER = logging.getLogger(__name__)
 CONF_TAGPRINTCD = "tagprintcd"
 CONF_APTDONG = "aptdong"
 CONF_APTHONO = "apthono"
-DEFAULT_NAME = "City waste"
+DEFAULT_NAME = "Citywaste"
 
 MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=30)
 
@@ -99,7 +99,7 @@ class CityWasteSensor(Entity):
     def state(self):
         """Return the state of the device."""
         try:
-            return round(self.data[self._condition], 1)
+            return round(self.data[self._condition], 2)
         except TypeError:
             return self.data[self._condition]
 
@@ -110,9 +110,9 @@ class CityWasteSensor(Entity):
             return {
                 "address": self.data["address"],
                 "total_count": self.data["total_count"],
-                "last_kg": round(self.data["last_kg"], 1),
+                "last_kg": round(self.data["last_kg"], 2),
                 "last_date": self.data["last_date"],
-                "total_kg": round(self.data["total_kg"], 1),
+                "total_kg": round(self.data["total_kg"], 2),
             }
 
     @property
