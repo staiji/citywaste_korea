@@ -24,9 +24,9 @@ MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=30)
 
 MONITORED_CONDITIONS = {
     "total_count": ["Total count", " ", "mdi:counter"],
-    "last_kg": ["Last kg", MASS_KILOGRAMS, "mdi:trash-can"],
+    "last_kg": ["Last kg", MASS_KILOGRAMS, "mdi:scale"],
     "last_date": ["Last date", " ", "mdi:calendar-clock"],
-    "total_kg": ["Total kg", MASS_KILOGRAMS, "mdi:trash-can"],
+    "total_kg": ["Total kg", MASS_KILOGRAMS, "mdi:scale"],
     "address": ["Address", " ", "mdi:home"],
 }
 
@@ -72,7 +72,6 @@ class CityWasteSensor(Entity):
         self.cwdata = cwdata
         self._name = name
         self._condition = condition
-        self.available1 = False
 
         variable_info = MONITORED_CONDITIONS[condition]
         self._condition_name = variable_info[0]
