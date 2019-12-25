@@ -6,6 +6,20 @@ This is a citywaste.or.kr sensor component for Home Assistant. (https://www.city
 
 Copy this folder to `<config_dir>/custom_components/citywaste_korea/`.
 
+```
+├── automations.yaml
+├── configuration.yaml
+├── custom_components
+│   ├── citywaste_korea
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── __init__.py
+│   │   ├── manifest.json
+│   │   └── sensor.py
+│   └── hacs
+│       ├── __init__.py
+```
+
 Add the following to your `configuration.yaml` file:
 
 ```yaml
