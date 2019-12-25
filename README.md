@@ -11,10 +11,10 @@ Add the following to your `configuration.yaml` file:
 ```yaml
 # Example configuration.yaml entry
 sensor:
-  platform: citywaste_korea
-  tagprintcd: KKRW0B1C000000000
-  aptdong: 101
-  apthono: 1004
+  - platform: citywaste_korea
+    tagprintcd: KKRW0B1C000000000
+    aptdong: 101
+    apthono: 1004
 ```
 
 - tagprintcd: RFID 태그 인쇄번호 입력
