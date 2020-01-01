@@ -146,6 +146,7 @@ class CityWasteData:
         totalkg = 0
         lastkg = 0
         totalPageCount = 0
+        lastdate = "-"
 
         self.available = False
 
@@ -181,13 +182,14 @@ class CityWasteData:
                 totalCnt = res.json()["totalCnt"]
                 totalPageCount = res.json()["paginationInfo"]["totalPageCount"]
                 address = res.json()["ctznnm"]
-                list = res.json()["list"]
+                if totalCnt > 0:
+                    list = res.json()["list"]
 
-                if len(list) > 0:
-                    lastkg = list[0]["qtyvalue"]
-                    lastdate = list[0]["dttime"]
-                    for i in list:
-                        totalkg += i["qtyvalue"]
+                    if len(list) > 0:
+                        lastkg = list[0]["qtyvalue"]
+                        lastdate = list[0]["dttime"]
+                        for i in list:
+                            totalkg += i["qtyvalue"]
 
             except ValueError as err:
                 _LOGGER.error("Error parsing json %s", err)
