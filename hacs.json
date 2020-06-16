@@ -1,6 +1,6 @@
 {
   "name": "Citywaste Korea",
-  "country": "KO",
+  "country": "KR",
   "content_in_root": true,
   "domains": ["sensor"],
   "render_readme": true
