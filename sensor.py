@@ -85,6 +85,11 @@ class CityWasteSensor(Entity):
         return "{} {}".format(self._name, self._condition_name)
 
     @property
+    def unique_id(self):
+        """Return the unique id of the device."""
+        return "{} {}".format(self._name, self._condition_name)
+
+    @property
     def icon(self):
         """Icon to use in the frontend, if any."""
         return self._icon
@@ -162,10 +167,6 @@ class CityWasteData:
 
         try:
             res = requests.get(REQ_URL)
-            if res.status_code == 404:
-                _LOGGER.info("retrying one more time for 1st page")
-                res = requests.get(URL)
-
             res.raise_for_status()
         except requests.exceptions.HTTPError as errh:
             _LOGGER.error("Http Error: %s", errh)
@@ -207,10 +208,6 @@ class CityWasteData:
                     REQ_URL = API_URL + "&pageIndex=" + str(currentPage)
                     _LOGGER.info("REQ_URL %s", REQ_URL)
                     res = requests.get(REQ_URL)
-                    if res.status_code == 404:
-                        _LOGGER.info("retrying one more time for page %s", currentPage)
-                        res = requests.get(REQ_URL)
-
                     res.raise_for_status()
                 except requests.exceptions.HTTPError as errh:
                     _LOGGER.error("Http Error: %s", errh)
