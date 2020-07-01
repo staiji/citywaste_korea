@@ -3,8 +3,12 @@
 This is a citywaste.or.kr sensor component for Home Assistant. (https://www.citywaste.or.kr)
 
 ### Installation
+#### 1. Component 추가
+1.1 HACS 사용시
 
-Copy this folder to `<config_dir>/custom_components/citywaste_korea/`.
+``HACS -> integrations -> 우상단 점세개 -> custom repository -> Add custom repository URL에 https://github.com/staiji/citywaste_korea 입력 -> Category에서  integration 선택 -> ADD``
+ 
+1.2 HACS 미사용시 다운로드 받은 파일을 `<config_dir>/custom_components/citywaste_korea/` 위치에 직접 복사
 
 ```
 ├── automations.yaml
@@ -20,7 +24,7 @@ Copy this folder to `<config_dir>/custom_components/citywaste_korea/`.
 │       ├── __init__.py
 ```
 
-Add the following to your `configuration.yaml` file:
+#### 2. `configuration.yaml` 파일에 다음 설정 추가
 
 ```yaml
 # Example configuration.yaml entry
