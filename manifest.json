@@ -1,6 +1,7 @@
 {
   "domain": "citywaste_korea",
   "name": "CityWaste Korea",
+  "version": "0.1.0",
   "documentation": "https://github.com/staiji/citywaste_korea",
   "dependencies": [],
   "codeowners": ["@staiji"],
