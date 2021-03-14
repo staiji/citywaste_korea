@@ -1,6 +1,8 @@
-# Home Assistant CityWaste Korea Component
+# Home Assistant CityWaste Korea Component (음식물 쓰레기 배출량 조회)
 
 This is a citywaste.or.kr sensor component for Home Assistant. (https://www.citywaste.or.kr)
+
+![citywaste_readme](https://user-images.githubusercontent.com/54183150/111070275-595c6680-8514-11eb-9979-ea1bd6c214d0.jpg)
 
 ### Installation
 #### 1. Component 추가
