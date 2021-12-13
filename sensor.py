@@ -108,7 +108,7 @@ class CityWasteSensor(Entity):
             return self.data[self._condition]
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes."""
         if self._condition == "total_count":
             return {
