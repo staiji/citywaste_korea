@@ -5,5 +5,6 @@
   "documentation": "https://github.com/staiji/citywaste_korea",
   "dependencies": [],
   "codeowners": ["@staiji"],
-  "requirements": []
+  "requirements": [],
+  "iot_class": "cloud_polling"
 }
