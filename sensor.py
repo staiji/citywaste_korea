@@ -164,9 +164,10 @@ class CityWasteData:
         )
         REQ_URL = API_URL + "&pageIndex=1"
         _LOGGER.info("REQ_URL %s", REQ_URL)
+        headers = {'Referer': 'https://www.citywaste.or.kr/portal/status/selectSimpleEmissionQuantity.do'}
 
         try:
-            res = requests.get(REQ_URL)
+            res = requests.get(REQ_URL, headers = headers)
             res.raise_for_status()
         except requests.exceptions.HTTPError as errh:
             _LOGGER.error("Http Error: %s", errh)
