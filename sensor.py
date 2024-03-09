@@ -8,7 +8,7 @@ import requests
 import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, MASS_KILOGRAMS
+from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, UnitOfMass
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
@@ -24,9 +24,9 @@ MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=30)
 
 MONITORED_CONDITIONS = {
     "total_count": ["Total count", " ", "mdi:counter"],
-    "last_kg": ["Last kg", MASS_KILOGRAMS, "mdi:scale"],
+    "last_kg": ["Last kg", UnitOfMass.KILOGRAMS, "mdi:scale"],
     "last_date": ["Last date", " ", "mdi:calendar-clock"],
-    "total_kg": ["Total kg", MASS_KILOGRAMS, "mdi:scale"],
+    "total_kg": ["Total kg", UnitOfMass.KILOGRAMS, "mdi:scale"],
     "address": ["Address", " ", "mdi:home"],
 }
 
